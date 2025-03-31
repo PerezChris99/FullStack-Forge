@@ -1,44 +1,46 @@
 # variables.py
 
-# This file contains examples and explanations of variables and data types in Python.
+# Python Variables and Data Types
+# ==============================
 
-# Variables in Python
-# A variable is a name that refers to a value. In Python, you can create a variable by simply assigning a value to it.
+# Variables are containers for storing data values
+name = "John Doe"  # String
+age = 25           # Integer
+height = 1.75      # Float
+is_student = True  # Boolean
 
-# Example of variable assignment
-name = "Alice"  # String variable
-age = 30        # Integer variable
-height = 5.5    # Float variable
-is_student = True  # Boolean variable
+# Python is dynamically typed - no need to declare variable types
+print(f"Name: {name}, Type: {type(name)}")
+print(f"Age: {age}, Type: {type(age)}")
+print(f"Height: {height}, Type: {type(height)}")
+print(f"Is Student: {is_student}, Type: {type(is_student)}")
 
-# Printing variables
-print("Name:", name)
-print("Age:", age)
-print("Height:", height)
-print("Is Student:", is_student)
+# Multiple assignment
+x, y, z = "Orange", "Banana", "Cherry"
+print(x, y, z)
 
-# Data Types in Python
-# Python has various built-in data types, including:
-# 1. Strings: Text data, e.g., "Hello, World!"
-# 2. Integers: Whole numbers, e.g., 42
-# 3. Floats: Decimal numbers, e.g., 3.14
-# 4. Booleans: True or False values
+# Same value to multiple variables
+a = b = c = "Python"
+print(a, b, c)
 
-# Example of different data types
-string_example = "Hello, World!"
-integer_example = 42
-float_example = 3.14
-boolean_example = False
+# Type conversion
+num_str = "100"
+num_int = int(num_str)
+print(f"Converted string to int: {num_int}")
 
-# Printing data types
-print("String Example:", string_example, "Type:", type(string_example))
-print("Integer Example:", integer_example, "Type:", type(integer_example))
-print("Float Example:", float_example, "Type:", type(float_example))
-print("Boolean Example:", boolean_example, "Type:", type(boolean_example))
+# Complex data types
+# Lists (mutable, ordered collection)
+fruits = ["apple", "banana", "cherry"]
+print(f"Fruits list: {fruits}, Type: {type(fruits)}")
 
-# Type Conversion
-# You can convert between data types using built-in functions.
-# Example of type conversion
-num_str = "100"  # String
-num_int = int(num_str)  # Convert to integer
-print("Converted Integer:", num_int, "Type:", type(num_int))
+# Tuple (immutable, ordered collection)
+coordinates = (10.0, 20.0)
+print(f"Coordinates: {coordinates}, Type: {type(coordinates)}")
+
+# Dictionary (key-value pairs)
+person = {"name": "John", "age": 25, "city": "New York"}
+print(f"Person dictionary: {person}, Type: {type(person)}")
+
+# Set (unordered collection of unique items)
+colors = {"red", "green", "blue"}
+print(f"Colors set: {colors}, Type: {type(colors)}")

@@ -1,38 +1,63 @@
 # modules_packages.py
 
-# This file discusses how to create and use modules and packages in Python.
+# Python Modules and Packages
+# ==========================
 
-# Creating a Module
-# A module is simply a Python file that contains definitions and statements. 
-# You can create a module by saving a Python file with a .py extension.
+# A module is a Python file containing code - functions, classes, variables
+# A package is a directory containing multiple modules
 
-# Example of a simple module (my_module.py):
-def greet(name):
-    return f"Hello, {name}!"
+# Importing standard modules
+import math
+import random
+import datetime
 
-# To use this module in another Python file, you can import it:
-# import my_module
-# print(my_module.greet("Alice"))
+# Using module functions
+print(f"Square root of 16: {math.sqrt(16)}")
+print(f"Random number between 1 and 10: {random.randint(1, 10)}")
+print(f"Current date: {datetime.date.today()}")
 
-# Creating a Package
-# A package is a way of organizing related modules into a single directory hierarchy.
-# To create a package, you need to create a directory and add an __init__.py file.
+# Importing specific functions or variables from modules
+from math import pi, cos
+print(f"Value of pi: {pi}")
+print(f"Cosine of 0: {cos(0)}")
 
-# Example of a package structure:
-# my_package/
-# ├── __init__.py
-# ├── module1.py
-# └── module2.py
+# Importing with aliases
+import datetime as dt
+print(f"Current time: {dt.datetime.now().time()}")
 
-# You can import modules from a package using:
-# from my_package import module1
-# or
-# import my_package.module1
+# Creating your own module
+# -----------------------
+# Let's say we have a file named 'mymath.py' with these functions:
+"""
+# mymath.py
+def add(a, b):
+    return a + b
+    
+def subtract(a, b):
+    return a - b
+"""
 
-# Using Modules and Packages
-# Once you have created your modules and packages, you can use them in your projects.
-# This promotes code reusability and better organization of your codebase.
+# We would import it like this:
+# import mymath
+# print(mymath.add(10, 5))
 
-# Example of using a package:
-# from my_package import module1
-# module1.some_function()
+# Creating packages
+# ----------------
+# A package is a directory with an __init__.py file and other modules
+# Example structure:
+"""
+mypackage/
+    __init__.py
+    module1.py
+    module2.py
+    subpackage/
+        __init__.py
+        module3.py
+"""
+
+# You would import from the package like this:
+# import mypackage.module1
+# from mypackage.subpackage import module3
+
+# The __init__.py file can be empty or can contain initialization code
+# that runs when the package is imported

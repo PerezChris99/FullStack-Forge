@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Techniques</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Demo container */
+        .demo {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* 1. Responsive Units */
+        .responsive-units p {
+            font-size: 1rem; /* Base font size (relative to root) */
+        }
+
+        .responsive-units h2 {
+            font-size: 2rem; /* 2x the size of the root font size */
+        }
+
+        .responsive-units .box {
+            width: 80%; /* Percentage of parent container */
+            max-width: 600px; /* Maximum width */
+            padding: 1em; /* 1x the font size of the element */
+            margin-bottom: 20px;
+            background-color: #3498db;
+            color: white;
+        }
+
+        .responsive-units .vh-box {
+            height: 50vh; /* 50% of the viewport height */
+            width: 50

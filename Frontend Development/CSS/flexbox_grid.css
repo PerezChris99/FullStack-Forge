@@ -1,0 +1,708 @@
+/**
+ * CSS Flexbox and Grid Layout Examples
+ * ===================================
+ * This file demonstrates modern CSS layout techniques using Flexbox and CSS Grid
+ */
+
+/* General reset and page setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #3498db;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.demo-area {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Item styling (common for both flexbox and grid demos) */
+.item {
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.item-1 { background-color: #3498db; }
+.item-2 { background-color: #2ecc71; }
+.item-3 { background-color: #e74c3c; }
+.item-4 { background-color: #f39c12; }
+.item-5 { background-color: #9b59b6; }
+.item-6 { background-color: #1abc9c; }
+
+/* ====================================================
+   FLEXBOX EXAMPLES
+   ==================================================== */
+
+/* Basic Flexbox container */
+.flex-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Flex direction */
+.flex-direction-row {
+  display: flex;
+  flex-direction: row; /* default */
+}
+
+.flex-direction-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Flex wrap */
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap; /* default */
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+/* For demonstrating wrap behavior */
+.flex-wrap .item, 
+.flex-nowrap .item, 
+.flex-wrap-reverse .item {
+  width: 200px;
+}
+
+/* Justify content (main axis alignment) */
+.justify-flex-start {
+  display: flex;
+  justify-content: flex-start; /* default */
+}
+
+.justify-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.justify-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Align items (cross axis alignment) */
+.align-stretch {
+  display: flex;
+  align-items: stretch; /* default */
+  height: 150px;
+}
+
+.align-flex-start {
+  display: flex;
+  align-items: flex-start;
+  height: 150px;
+}
+
+.align-flex-end {
+  display: flex;
+  align-items: flex-end;
+  height: 150px;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.align-baseline {
+  display: flex;
+  align-items: baseline;
+  height: 150px;
+}
+
+/* Different text sizes to demonstrate baseline alignment */
+.align-baseline .item-1 { font-size: 12px; }
+.align-baseline .item-2 { font-size: 24px; }
+.align-baseline .item-3 { font-size: 18px; }
+.align-baseline .item-4 { font-size: 32px; }
+
+/* Align content (multiple line alignment) */
+.align-content-examples {
+  height: 300px;
+}
+
+.align-content-flex-start {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 300px;
+}
+
+.align-content-flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  height: 300px;
+}
+
+.align-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 300px;
+}
+
+.align-content-space-between {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 300px;
+}
+
+.align-content-space-around {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 300px;
+}
+
+/* For demonstrating align-content */
+.align-content-examples .item {
+  width: 30%;
+  margin: 5px;
+}
+
+/* Individual flex item properties */
+.flex-item-demo {
+  display: flex;
+  height: 200px;
+  background-color: #f8f9fa;
+}
+
+/* order property */
+.order-default { order: 0; } /* default */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+
+/* flex-grow property */
+.flex-grow-0 { flex-grow: 0; } /* default */
+.flex-grow-1 { flex-grow: 1; }
+.flex-grow-2 { flex-grow: 2; }
+.flex-grow-3 { flex-grow: 3; }
+
+/* flex-shrink property */
+.flex-shrink-demo {
+  width: 500px; /* constrained width to demonstrate shrink */
+}
+.flex-shrink-0 { 
+  flex-shrink: 0; 
+  width: 200px;
+}
+.flex-shrink-1 { 
+  flex-shrink: 1; /* default */
+  width: 200px;
+}
+.flex-shrink-3 { 
+  flex-shrink: 3; 
+  width: 200px;
+}
+
+/* flex-basis property */
+.flex-basis-auto { flex-basis: auto; } /* default */
+.flex-basis-0 { flex-basis: 0; }
+.flex-basis-100 { flex-basis: 100px; }
+.flex-basis-200 { flex-basis: 200px; }
+.flex-basis-50-percent { flex-basis: 50%; }
+
+/* flex shorthand */
+.flex-0-1-auto { flex: 0 1 auto; } /* default */
+.flex-1-0-auto { flex: 1 0 auto; } /* grow but don't shrink */
+.flex-1 { flex: 1; } /* same as flex: 1 1 0 */
+.flex-2 { flex: 2; } /* twice the growth factor */
+
+/* align-self property */
+.align-self-demo {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+.align-self-auto { align-self: auto; } /* default */
+.align-self-flex-start { align-self: flex-start; }
+.align-self-flex-end { align-self: flex-end; }
+.align-self-center { align-self: center; }
+.align-self-stretch { align-self: stretch; }
+
+/* Common flexbox layouts */
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Card layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 0 300px; /* grow, don't shrink, basis */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Holy grail layout */
+.holy-grail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.holy-grail-header,
+.holy-grail-footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.holy-grail-body {
+  display: flex;
+  flex: 1;
+}
+
+.holy-grail-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.holy-grail-nav,
+.holy-grail-ads {
+  flex: 0 0 150px; /* don't grow, don't shrink, fixed width */
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.holy-grail-nav {
+  order: -1; /* place before content on the left */
+}
+
+/* Responsive design with flex */
+@media (max-width: 768px) {
+  .holy-grail-body {
+    flex-direction: column;
+  }
+  
+  .holy-grail-nav,
+  .holy-grail-ads {
+    flex: 0 0 auto;
+  }
+  
+  .holy-grail-nav {
+    order: 0; /* restore natural order on small screens */
+  }
+}
+
+/* ====================================================
+   CSS GRID EXAMPLES
+   ==================================================== */
+
+/* Basic grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px; /* 3 columns of 200px each */
+  grid-gap: 10px; /* spacing between grid items */
+  margin-bottom: 20px;
+}
+
+/* Using repeat function */
+.grid-repeat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-gap: 10px;
+}
+
+/* Using auto-fill and minmax for responsive columns */
+.grid-auto-fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+/* Using auto-fit for responsive columns that expand */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+/* Grid with named areas */
+.grid-template-areas {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+  grid-gap: 10px;
+  height: 400px;
+}
+
+.grid-template-areas .header { grid-area: header; background-color: #3498db; }
+.grid-template-areas .nav { grid-area: nav; background-color: #2ecc71; }
+.grid-template-areas .main { grid-area: main; background-color: #e74c3c; }
+.grid-template-areas .aside { grid-area: aside; background-color: #f39c12; }
+.grid-template-areas .footer { grid-area: footer; background-color: #9b59b6; }
+
+/* Grid item positioning */
+.grid-positioning {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+/* Spanning multiple rows and columns */
+.span-row-2 {
+  grid-row: span 2;
+}
+
+.span-col-2 {
+  grid-column: span 2;
+}
+
+.span-row-col-2 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+/* Specific grid placement */
+.grid-item-specific {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.grid-item-specific .item-1 {
+  grid-column: 1 / 3; /* start at line 1, end at line 3 */
+  grid-row: 1 / 2;
+}
+
+.grid-item-specific .item-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+
+.grid-item-specific .item-3 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.grid-item-specific .item-4 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.grid-item-specific .item-5 {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.grid-item-specific .item-6 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+/* Grid with auto-rows and auto-columns */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
+
+/* Grid with dense auto-flow to fill in gaps */
+.grid-dense {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+/* Alignment in grid - items */
+.grid-alignment {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 10px;
+  height: 400px;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+}
+
+.justify-items-start { justify-items: start; }
+.justify-items-end { justify-items: end; }
+.justify-items-center { justify-items: center; }
+.justify-items-stretch { justify-items: stretch; } /* default */
+
+.align-items-start { align-items: start; }
+.align-items-end { align-items: end; }
+.align-items-center { align-items: center; }
+.align-items-stretch { align-items: stretch; } /* default */
+
+/* Individual grid item alignment */
+.justify-self-start { justify-self: start; }
+.justify-self-end { justify-self: end; }
+.justify-self-center { justify-self: center; }
+.justify-self-stretch { justify-self: stretch; } /* default */
+
+.align-self-start { align-self: start; }
+.align-self-end { align-self: end; }
+.align-self-center { align-self: center; }
+.align-self-stretch { align-self: stretch; } /* default */
+
+/* Alignment of the grid in its container */
+.grid-container-alignment {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 10px;
+  height: 400px;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+}
+
+.justify-content-start { justify-content: start; } /* default */
+.justify-content-end { justify-content: end; }
+.justify-content-center { justify-content: center; }
+.justify-content-stretch { justify-content: stretch; }
+.justify-content-space-around { justify-content: space-around; }
+.justify-content-space-between { justify-content: space-between; }
+.justify-content-space-evenly { justify-content: space-evenly; }
+
+.align-content-start { align-content: start; } /* default */
+.align-content-end { align-content: end; }
+.align-content-center { align-content: center; }
+.align-content-stretch { align-content: stretch; }
+.align-content-space-around { align-content: space-around; }
+.align-content-space-between { align-content: space-between; }
+.align-content-space-evenly { align-content: space-evenly; }
+
+/* Common grid layouts */
+
+/* Magazine layout */
+.magazine-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+}
+
+.magazine-layout .featured {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.magazine-layout .standard {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.magazine-layout .wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* Dashboard layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "header header header header"
+    "sidebar sidebar sidebar sidebar"
+    "main main main main"
+    "widget1 widget2 widget3 widget4"
+    "footer footer footer footer";
+  grid-gap: 10px;
+  height: 600px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-layout {
+    grid-template-areas:
+      "header header header header"
+      "sidebar main main main"
+      "sidebar widget1 widget2 widget3"
+      "sidebar widget4 widget4 widget4"
+      "footer footer footer footer";
+  }
+}
+
+.dashboard-layout .header { grid-area: header; background-color: #3498db; }
+.dashboard-layout .sidebar { grid-area: sidebar; background-color: #2ecc71; }
+.dashboard-layout .main { grid-area: main; background-color: #e74c3c; }
+.dashboard-layout .widget1 { grid-area: widget1; background-color: #f39c12; }
+.dashboard-layout .widget2 { grid-area: widget2; background-color: #9b59b6; }
+.dashboard-layout .widget3 { grid-area: widget3; background-color: #1abc9c; }
+.dashboard-layout .widget4 { grid-area: widget4; background-color: #34495e; }
+.dashboard-layout .footer { grid-area: footer; background-color: #95a5a6; }
+
+/* Photo gallery */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.photo-gallery .photo {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%; /* square aspect ratio */
+}
+
+.photo-gallery .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Feature comparison (like pricing tables) */
+.feature-comparison {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.feature-comparison .feature-name {
+  font-weight: bold;
+}
+
+.feature-comparison .plan-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.feature-comparison .plan-price {
+  font-size: 24px;
+  text-align: center;
+}
+
+.feature-comparison .feature-value {
+  text-align: center;
+}
+
+.feature-comparison .highlight {
+  background-color: #f8f9fa;
+}

@@ -2,49 +2,99 @@
 
 This document contains a curated list of books that are highly recommended for anyone looking to learn full-stack development. These books cover various aspects of both backend and frontend technologies, as well as general programming concepts.
 
-## Python and Flask
+## Python and Backend Development
 
-1. **"Flask Web Development" by Miguel Grinberg**
-   - A comprehensive guide to building web applications using Flask. It covers everything from the basics to advanced topics like deployment and testing.
-
-2. **"Automate the Boring Stuff with Python" by Al Sweigart**
-   - A great resource for beginners to learn Python through practical projects. It covers essential programming concepts and how to apply them in real-world scenarios.
-
-3. **"Python Crash Course" by Eric Matthes**
+1. **"Python Crash Course" by Eric Matthes** (2023 Edition)
    - An excellent introduction to Python programming, this book is perfect for beginners and covers fundamental concepts with hands-on projects.
+   - ISBN: 978-1718502703
 
-## JavaScript and Node.js
+2. **"Flask Web Development" by Miguel Grinberg** (2nd Edition)
+   - A comprehensive guide to building web applications using Flask. It covers everything from the basics to advanced topics like deployment and testing.
+   - ISBN: 978-1491991725
 
-1. **"Eloquent JavaScript" by Marijn Haverbeke**
+3. **"Fluent Python" by Luciano Ramalho** (2nd Edition)
+   - A deep dive into Python's features and libraries for intermediate to advanced developers.
+   - ISBN: 978-1492056355
+
+4. **"Architecture Patterns with Python" by Harry Percival & Bob Gregory**
+   - Learn how to design clean, testable, and maintainable code for complex applications.
+   - ISBN: 978-1492052203
+
+5. **"Database Design for Mere Mortals" by Michael J. Hernandez**
+   - A practical approach to database design, regardless of the specific database technology.
+   - ISBN: 978-0321884497
+
+## JavaScript and Frontend Development
+
+1. **"Eloquent JavaScript" by Marijn Haverbeke** (3rd Edition)
    - A modern introduction to programming using JavaScript. It covers both the language and the broader concepts of programming.
+   - ISBN: 978-1593279509
 
-2. **"You Don’t Know JS" (book series) by Kyle Simpson**
-   - A deep dive into the mechanics of JavaScript, this series is perfect for those who want to understand the language at a fundamental level.
+2. **"JavaScript: The Definitive Guide" by David Flanagan** (7th Edition)
+   - A comprehensive resource for JavaScript covering the latest language features and APIs.
+   - ISBN: 978-1491952023
 
-3. **"Node.js Design Patterns" by Mario Casciaro and Luciano Mammino**
-   - This book explores design patterns in Node.js, helping developers write more efficient and maintainable code.
-
-## Frontend Development
-
-1. **"JavaScript and JQuery: Interactive Front-End Web Development" by Jon Duckett**
-   - A visually rich book that teaches JavaScript and jQuery in a clear and engaging way, making it suitable for beginners.
-
-2. **"Learning React" by Alex Banks and Eve Porcello**
-   - A practical guide to building user interfaces with React, covering the core concepts and best practices.
-
-3. **"CSS: The Definitive Guide" by Eric Meyer and Estelle Weyl**
+3. **"CSS: The Definitive Guide" by Eric Meyer and Estelle Weyl** (4th Edition)
    - A comprehensive resource for learning CSS, this book covers everything from the basics to advanced techniques for styling web applications.
+   - ISBN: 978-1449393199
 
-## General Full-Stack Development
+4. **"Learning React" by Alex Banks and Eve Porcello** (2nd Edition)
+   - A practical guide to building user interfaces with React, covering the core concepts and best practices.
+   - ISBN: 978-1492051725
 
-1. **"Fullstack Vue: The Complete Guide to Vue.js" by Hassan Djirdeh, Nate Murray, and Ari Lerner**
-   - A complete guide to building applications with Vue.js, covering both frontend and backend integration.
+5. **"Web Development with Node and Express" by Ethan Brown** (2nd Edition)
+   - A practical guide to building server-side applications with Node.js and Express.
+   - ISBN: 978-1492053507
 
-2. **"The Road to React" by Robin Wieruch**
+## Modern Full-Stack Development
+
+1. **"Full-Stack React, TypeScript, and Node" by David Choi** (2020)
+   - Build modern web applications with React, TypeScript, and Node.js.
+   - ISBN: 978-1839219931
+
+2. **"The Road to React" by Robin Wieruch** (Latest Edition)
    - A hands-on guide to learning React, this book emphasizes practical application and building real-world projects.
+   - Available online at: https://www.roadtoreact.com/
 
-3. **"Designing Data-Intensive Applications" by Martin Kleppmann**
-   - A deep dive into the architecture of data systems, this book is essential for understanding how to build scalable and maintainable applications.
+3. **"GraphQL in Action" by Samer Buna** (2021)
+   - Learn how to build efficient APIs using GraphQL with practical examples.
+   - ISBN: 978-1617295683
+
+4. **"Designing Data-Intensive Applications" by Martin Kleppmann**
+   - A deep dive into the principles and practices of building robust, scalable, and maintainable applications.
+   - ISBN: 978-1449373320
+
+## Software Engineering and Best Practices
+
+1. **"Clean Code: A Handbook of Agile Software Craftsmanship" by Robert C. Martin**
+   - Principles and practices for writing clean, maintainable code.
+   - ISBN: 978-0132350884
+
+2. **"Refactoring: Improving the Design of Existing Code" by Martin Fowler** (2nd Edition)
+   - Learn how to improve the design of existing code without changing its behavior.
+   - ISBN: 978-0134757599
+
+3. **"Grokking Algorithms" by Aditya Bhargava**
+   - A beginner-friendly introduction to algorithms with illustrated examples.
+   - ISBN: 978-1617292231
+
+4. **"The Pragmatic Programmer" by David Thomas and Andrew Hunt** (20th Anniversary Edition)
+   - Practical advice for software developers on how to be more effective and productive.
+   - ISBN: 978-0135957059
+
+## Free and Online Books
+
+1. **"You Don't Know JS" series by Kyle Simpson**
+   - A deep dive into JavaScript language mechanisms
+   - Available free on GitHub: https://github.com/getify/You-Dont-Know-JS
+
+2. **"Learn Python the Hard Way" by Zed A. Shaw**
+   - A step-by-step guide to learning Python through practice
+   - Available online (partial free access)
+
+3. **"Pro Git" by Scott Chacon and Ben Straub**
+   - Everything you need to know about Git
+   - Available free online: https://git-scm.com/book/en/v2
 
 ## Conclusion
 

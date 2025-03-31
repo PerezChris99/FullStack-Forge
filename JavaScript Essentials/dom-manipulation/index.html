@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Examples</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+        
+        .highlighted {
+            background-color: #ffffcc;
+            padding: 5px;
+        }
+        
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        
+        .item {
+            padding: 8px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        input {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        
+        .dynamic-list {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        
+        .dynamic-content {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">DOM Manipulation Examples</h1>
+    <h2 id="subtitle">Learn how to interact with the DOM</h2>
+    
+    <div class="info-box">
+        <p>This page demonstrates various techniques for DOM manipulation using JavaScript.</p>
+        <p>Open your browser's console to see the output of the examples.</p>
+    </div>
+    
+    <div class="item">Item 1 - First example item</div>
+    <div class="item">Item 2 - Second example item</div>
+    <div class="item">Item 3 - Third example item</div>
+    
+    <div id="content">
+        <h2>Dynamic Content Section</h2>
+        <p>The JavaScript will add content below this paragraph.</p>
+    </div>
+    
+    <script src="dom_examples.js"></script>
+</body>
+</html>
